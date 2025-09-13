@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frontend Assignment - Full Page</title>
+  <style>
+    :root {
+      --primary-color: #ff6e6e; /* Navbar + card background */
+      --hero-bg-color: #ffe6e6; /* Hero section background */
+      --text-color: #111;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: white;
+      color: var(--text-color);
+    }
+
+    /* Header / Navbar */
+    header {
+      width: 100%;
+      background-color: var(--primary-color);
+      padding: 16px 40px; 
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav {
+      flex: 1;
+      display: flex;
+      justify-content: center; /* Center nav items */
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 25px; 
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      font-weight: bold;
+      font-size: 14px;
+      color: black;
+      cursor: pointer;
+    }
+
+    nav ul li:hover {
+      text-decoration: underline;
+    }
+
+    /* Menu icon */
+    .menu-icon {
+      width: 24px;
+      height: 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+      margin-left: 20px;
+    }
+
+    .menu-icon span {
+      display: block;
+      height: 2.5px;
+      width: 100%;
+      background-color: black;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      min-height: 600px;
+      width: 100%;
+    }
+
+    .hero-left {
+      background-color: var(--hero-bg-color);
+      flex: 1;
+      padding: 80px 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .hero-left h1 {
+      font-size: 40px;
+      font-weight: bold;
+      margin-bottom: 25px;
+    }
+
+    .hero-left p {
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 500px;
+      margin-bottom: 25px;
+    }
+
+    .hero-left button {
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      padding: 6px 15px;
+      font-size: 12px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .hero-right {
+      flex: 1;
+      min-height: 600px;
+      background: url('pexels-robin-stickel-70497.jpg') no-repeat center center/cover;
+    }
+
+    /* Section Two */
+    .section-two {
+      margin-top: 40px;
+      background: linear-gradient(to right, #ffd4c1, #fbb0f0);
+      padding: 80px 50px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .image-flex {
+      display: flex;
+      flex: 1 1 55%;
+      gap: 15px;
+      max-width: 600px;
+    }
+
+    .column-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      flex: 1;
+    }
+
+    .column-stack img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    .tall-image {
+      flex: 1;
+    }
+
+    .tall-image img {
+      width: 100%;
+      height: 375px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    .card {
+      background-color: var(--primary-color);
+      color: black;
+      padding: 25px 30px;
+      flex: 1 1 35%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-radius: 6px;
+      max-width: 400px;
+      height: 250px;
+    }
+
+    .card small {
+      font-size: 12px;
+      margin-bottom: 5px;
+      text-transform: uppercase;
+    }
+
+    .card h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    .card a {
+      text-decoration: none;
+      color: #111;
+      font-weight: bold;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav {
+        justify-content: center;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      header {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .hero {
+        flex-direction: column;
+      }
+
+      .section-two {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .image-flex {
+        flex-direction: column;
+      }
+
+      .card {
+        width: 100%;
+        max-width: none;
+      }
+
+      .column-stack img,
+      .tall-image img {
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header / Navbar -->
+  <header>
+    <nav>
+      <ul>
+        <li>Home</li>
+        <li>Order</li>
+        <li>Food</li>
+        <li>Restaurant</li>
+        <li>Testimonials</li>
+        <li>Contact Us</li>
+      </ul>
+    </nav>
+    <div class="menu-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <!-- Section 1: Hero -->
+  <section class="hero">
+    <div class="hero-left">
+      <h1>LOREM IPSUM</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id est vitae dolor rhoncus tristique.
+        Maecenas metus quam, rhoncus euismod lorem in, sollicitudin viverra eros. Donec dictum luctus quam ut
+        tristique. Curabitur nec faucibus purus. Quisque congue sem nec justo mollis, in tincidunt erat pretium.
+        Sed pulvinar, massa ac porta viverra.
+      </p>
+      <button>Click Me</button>
+    </div>
+    <div class="hero-right"></div>
+  </section>
+
+  <!-- Section 2: Images + Card -->
+  <section class="section-two">
+    <div class="image-flex">
+      <div class="column-stack">
+        <img src="pexels-rachel-claire-6752433.jpg" alt="Image 1" />
+        <img src="pexels-eva-bronzini-6141651.jpg" alt="Image 3" />
+      </div>
+      <div class="tall-image">
+        <img src="pexels-mister-mister-3434523.jpg" alt="Image 2" />
+      </div>
+    </div>
+    <div class="card">
+      <small>LOREM IPSUM</small>
+      <h2>LOREM IPSUM SET ADEMIR</h2>
+      <a href="#">Click →</a>
+    </div>
+  </section>
+
+</body>
+</html>
