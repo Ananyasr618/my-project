@@ -6,8 +6,7 @@
   <title>Frontend Assignment - Full Page</title>
   <style>
     :root {
-      --primary-color: #ff6e6e; /* Navbar + card background */
-      --hero-bg-color: #ffe6e6; /* Hero section background */
+      --primary-color: #ff6e6e; 
       --text-color: #111;
     }
 
@@ -23,7 +22,6 @@
       color: var(--text-color);
     }
 
-    /* Header / Navbar */
     header {
       width: 100%;
       background-color: var(--primary-color);
@@ -36,7 +34,7 @@
     nav {
       flex: 1;
       display: flex;
-      justify-content: center; /* Center nav items */
+      justify-content: center; 
     }
 
     nav ul {
@@ -59,7 +57,6 @@
       text-decoration: underline;
     }
 
-    /* Menu icon */
     .menu-icon {
       width: 24px;
       height: 18px;
@@ -77,7 +74,6 @@
       background-color: black;
     }
 
-    /* Hero Section */
     .hero {
       display: flex;
       flex-wrap: wrap;
@@ -85,8 +81,9 @@
       width: 100%;
     }
 
+    /* Updated hero background */
     .hero-left {
-      background-color: var(--hero-bg-color);
+      background: linear-gradient(to right, #fff3b0, #ffc0cb);
       flex: 1;
       padding: 80px 50px;
       display: flex;
@@ -123,9 +120,9 @@
       background: url('pexels-robin-stickel-70497.jpg') no-repeat center center/cover;
     }
 
-    /* Section Two */
+    /* Reduced space between hero and section-two */
     .section-two {
-      margin-top: 40px;
+      margin-top: 20px; /* reduced from 40px */
       background: linear-gradient(to right, #ffd4c1, #fbb0f0);
       padding: 80px 50px;
       display: flex;
@@ -201,7 +198,6 @@
       gap: 5px;
     }
 
-    /* Responsive */
     @media (max-width: 768px) {
       nav {
         justify-content: center;
@@ -244,7 +240,6 @@
 </head>
 <body>
 
-  <!-- Header / Navbar -->
   <header>
     <nav>
       <ul>
@@ -263,7 +258,6 @@
     </div>
   </header>
 
-  <!-- Section 1: Hero -->
   <section class="hero">
     <div class="hero-left">
       <h1>LOREM IPSUM</h1>
@@ -278,7 +272,6 @@
     <div class="hero-right"></div>
   </section>
 
-  <!-- Section 2: Images + Card -->
   <section class="section-two">
     <div class="image-flex">
       <div class="column-stack">
